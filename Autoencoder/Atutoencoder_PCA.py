@@ -6,6 +6,7 @@ def encoder(input, input_feature):
     
     with tf.name_scope("encoder"):
 
+        with tf.name_scope("layer_1"):
             
             input_features = input_feature
             w = tf.get_variable('weights1', [input_features, 1000], initializer=tf.random_normal_initializer(stddev=(1.0/input_features)**0.5))
